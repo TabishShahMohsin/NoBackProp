@@ -1,0 +1,20 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Conda / Virtual Environments
+.env
+.venv
+env/
+venv/
+
+# Script specific outputs
+comparison_plot.png
+
+# MacOS
+.DS_Store
