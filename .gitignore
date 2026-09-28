@@ -12,9 +12,14 @@ Thumbs.db
 .venv
 env/
 venv/
+anaconda_projects/
+.ipynb_checkpoints
 
 # Script specific outputs
 comparison_plot.png
 
 # MacOS
 .DS_Store
+
+# Dataset
+data/

@@ -66,3 +66,24 @@ NoBackProp/
 └── tests/
     └── test_algorithms.py       # sanity checks — this is what would've caught your TP double-backward bug immediately
 ```
+
+# True File Tree:
+```
+bp-project/
+├── data/
+│   └── mnist_raw.pkl.gz     # MNIST, 50k/10k/10k train/val/test split (see below to fetch)
+├── src/
+│   ├── data.py               # shared loader — every method uses this, no exceptions
+│   ├── model.py               # shared MLP (784-256-128-10), forward pass + BP gradient
+│   └── train_backprop.py     # backprop baseline training loop
+├── results/
+│   └── backprop_mnist.csv    # per-epoch metrics: loss, acc, grad norm, epoch time
+└── plots/
+    └── backprop_mnist_curves.png
+```
+
+# Data Used
+### MNIST
+```bash
+curl -sL -o data/mnist_raw.pkl.gz "https://raw.githubusercontent.com/mnielsen/neural-networks-and-deep-learning/master/data/mnist.pkl.gz"
+```
